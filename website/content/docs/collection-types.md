@@ -14,7 +14,7 @@ Folder collections represent one or more files with the same format, fields, and
 
 Unlike file collections, folder collections have the option to allow editors to create new items in the collection. This is set by the boolean `create` field.
 
-**Note:** Folder collections must have at least one field with the name "title" for creating new entry slugs. That field should use the default "string" widget. The "label" for the field can be any string value.
+**Note:** Folder collections must have at least one field with the name "title" for creating new entry slugs. That field should use the default "string" widget. The "label" for the field can be any string value. If you wish to use a different field as your identifier, set `identifier_field` to the field name.
 
 Example:
 
@@ -25,6 +25,21 @@ Example:
   create: true
   fields:
     - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "thumbnail", widget: "image"}
+    - {label: "Body", name: "body", widget: "markdown"}
+```
+
+With `identifier_field`:
+
+```yaml
+- label: "Blog"
+  name: "blog"
+  folder: "_posts/blog"
+  create: true
+  identifier_field: name
+  fields:
+    - {label: "Name", name: "name", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "thumbnail", widget: "image"}
     - {label: "Body", name: "body", widget: "markdown"}

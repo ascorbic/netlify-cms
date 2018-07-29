@@ -70,7 +70,7 @@ function validateCollection(collection) {
   }
   if (folder && !selectIdentifier(collection)) {
     // Verify that folder-type collections have an identifier field for slug creation.
-    throw new Error(`Collection "${name}" must have a field that is a valid entry identifier. Supported fields are ${IDENTIFIER_FIELDS.join(', ')}.`);
+    throw new Error(`Collection "${name}" must have a field that is a valid entry identifier. Supported fields are ${IDENTIFIER_FIELDS.join(', ')}. Alternatively, set "identifier_field" set to a valid field name.`);
   }
 }
 
