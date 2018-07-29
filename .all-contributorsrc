@@ -984,6 +984,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ascorbic",
+      "name": "Matt Kane",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/213306?v=4",
+      "profile": "http://mk.gg",
+      "contributions": [
+        "bug",
+        "code",
+        "doc"
+      ]
     }
   ],
   "repoType": "github"
